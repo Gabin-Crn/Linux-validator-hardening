@@ -1,0 +1,15 @@
+profile: 
+  id: baseline
+  version: 1.0.0
+  target: "local"
+
+requirements:
+  - id: OS-01
+    title: Identify OS and Kernel
+    severity: info
+    check: 
+      type: evidence-only
+      command: "uname -a && (cat /etc/os-release 2>/dev/null || true)"
+  
+
+
